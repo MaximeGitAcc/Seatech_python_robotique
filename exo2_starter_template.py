@@ -27,12 +27,14 @@ class Human():
 
 class Cyborg(Robot, Human):   
 
-    #__slots__ = ()
+    __slots__ = ()
 
     def __init__(self, name, sexe,diet):  
         Robot.__init__(self, name)
         Human.__init__(self, sexe, diet)
 
+    def BigJump (self):
+        print("The Cyborg Jump Hard thanks to his legs !")
 
 
 cyborg = Cyborg('Deux Ex Machina', 'M', 'Omnivorous')
@@ -44,5 +46,6 @@ cyborg.Carac()
 cyborg.eat('banana')
 cyborg.eat(['coca', 'chips'])
 cyborg.digest()
+cyborg.BigJump()
 
-# cyborg.truc_fun()
+#cyborg.truc_fun()
