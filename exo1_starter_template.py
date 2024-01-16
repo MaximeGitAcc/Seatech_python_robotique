@@ -6,9 +6,9 @@ class Robot():
 
    __slots__ = ("__name","__current_speed","__battery_level","__states","__power","__vitesse","__direction","__EnCharge")
 
-   def __init__(self):
+   def __init__(self,name):
 	
-      self.__name = input("Le temps est venue de lui donner un petit nom : ")
+      self.__name = name
       self.__current_speed = 0
       self.__battery_level = 20
       self.__states = ['shutown', 'running']
@@ -51,12 +51,15 @@ class Robot():
                time.sleep(0.5)
                T += 1
                print("Mon niveau de batterie est de ", self.__battery_level, "%", end='\r', flush=True)
+      else:
+         print("batterie Full !")
+
             
    
    def Avancer (self):
       if self.power == 'running':
-         self.__vitesse = input("Entrez une vitesse (Max 20 kmH) : ")
-         if self.__vitesse == '20':
+         self.__vitesse = int(input("Entrez une vitesse (Max 20 kmH) : "))
+         if self.__vitesse <= 20:
             self.__direction = self.__direction[0]
             print("Le robot se déplace à une vitesse de ", self.__vitesse, "vers l'avant")
       else :
@@ -64,8 +67,8 @@ class Robot():
 
    def Reculer (self):
       if self.power == 'running':
-         self.__vitesse = input("Entrez une vitesse (Max 5 kmH en arrière) : ")
-         if self.__vitesse == '-5':
+         self.__vitesse = abs(int(input("Entrez une vitesse (Max 5 kmH en arrière) : ")))
+         if -self.__vitesse >= -5:
             self.__direction = self.__direction[1]
             print("Le robot se déplace à une vitesse de ", self.__vitesse, "vers l'arrière")
       else :
@@ -104,8 +107,7 @@ class Robot():
          return self.action
 
 
-if __name__ == '__main__':
-   pass
+
 
 
 
