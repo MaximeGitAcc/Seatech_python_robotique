@@ -1,5 +1,5 @@
 import time
-
+import math
 
 
 class Robot():     
@@ -11,6 +11,8 @@ class Robot():
       self.__battery_level = 0
       self.__states = ['shutown', 'running']
       self.power = False
+      self.__vitesse = 0
+      self.__direction = ['Avance','Recule']
       print("Bonjour, je suis votre nouveau robot. J'aime beaucoup le prénom que vous m'avez donnée :", self.__name)
     
    def allumer (self):
@@ -35,6 +37,19 @@ class Robot():
        while (self.__battery_level >0):
           for i in range(self.__battery_level):
              self.__battery_level -= 1
+
+   def Avancer (self):
+      self.__vitesse = input("Entrez une vitesse (Max 20 kmH ")
+      if self.__vitesse < 20:
+         self.__direction = self.__direction[0]
+
+   def Reculer (self):
+      self.__vitesse = abs(input("Entrez une vitesse (Max 5 kmH en arrière) "))
+      if -self.__vitesse > -5:
+         self.__direction = self.__direction[1]
+    
+
+      
 
    @property
    def power(self):
