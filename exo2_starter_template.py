@@ -11,7 +11,7 @@ class Human():
       self.__food = []
       
     def eat(self,food):
-        print("You ate a ", food)
+        print("Eating a ", food)
 
     def digest(self):
         print("The banana will be easy to digest, rather than coca and chips !")
@@ -42,6 +42,8 @@ cyborg = Cyborg('Deux Ex Machina', 'M', 'Omnivorous')
 print('name :',cyborg.name, '\nsexe :', cyborg.sexe, '\ndiet :', cyborg.diet)
 print('Charging battery...')
 cyborg.charge()
+cyborg.Carac()
+cyborg.allumer()
 cyborg.Carac()
 cyborg.eat('banana')
 cyborg.eat(['coca', 'chips'])
