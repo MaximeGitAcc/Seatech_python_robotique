@@ -39,7 +39,7 @@ class Cyborg(Robot, Human):
 
 cyborg = Cyborg('Deux Ex Machina', 'M', 'Omnivorous')
 
-print(cyborg.name, 'sexe', cyborg.sexe)
+print('name :',cyborg.name, '\nsexe :', cyborg.sexe, '\ndiet :', cyborg.diet)
 print('Charging battery...')
 cyborg.charge()
 cyborg.Carac()
