@@ -105,6 +105,11 @@ class Robot():
    def action(self):
       if self.__power:
          return self.action
+      
+   @property
+   def name(self):
+      if self.__name:
+         return self.__name
 
 
 
