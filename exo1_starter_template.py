@@ -1,15 +1,17 @@
 import time
 
-class Robot():   
-    
 
-   def __init__(self, name):
+
+class Robot():     
+
+   def __init__(self):
 	
-      self.__name = name
+      self.__name = input("Le temps est venue de lui donner un petit nom : ")
       self.__current_speed = 0
       self.__battery_level = 0
       self.__states = ['shutown', 'running']
       self.power = False
+      print("Bonjour, je suis votre nouveau robot. J'aime beaucoup le prénom que vous m'avez donnée :", self.__name)
     
    def allumer (self):
        self.power = self.__states[1]
@@ -26,7 +28,7 @@ class Robot():
           while (self.__battery_level <100):
            for i in range (100) and T <=10:
               self.__battery_level += 1
-              time.sleep(1)
+              time.sleep(0.5)
               T += 1
    
    def decharge (self):
@@ -49,8 +51,10 @@ class Robot():
 
 
 if __name__ == '__main__':
-   r1 = Robot()
-   print(r1.power)
+   pass
+
+
+
 
 
 
