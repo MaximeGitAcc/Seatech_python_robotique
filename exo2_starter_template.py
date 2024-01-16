@@ -48,11 +48,10 @@ cyborg.Carac()
 cyborg.eat('banana')
 cyborg.eat(['coca', 'chips'])
 cyborg.digest()
-cyborg.BigJump()
-
-#cyborg.truc_fun()
-
-
+cyborg.BigJump() #C'est le truc fun 
+#                           |
+#                           v       
+#
 #                         ██████                      
 #     ████            ██████░░░░██                    
 #   ██▒▒▒▒██        ██▒▒░░░░██░░░░██          ████    
