@@ -33,7 +33,7 @@ class Cyborg(Robot, Human):
         Robot.__init__(self, name)
         Human.__init__(self, sexe, diet)
 
-    def BigJump (self):
+    def bigjump (self):
         print("The Cyborg Jump Hard thanks to his legs !")
 
 
