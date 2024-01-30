@@ -43,7 +43,7 @@ class Unmanned(metaclass=ABCMeta):
 class UUV(Unmanned,vehicule):
 
     def vehicule_type(self):
-        print("I'm an UUV")
+        print("I'm an UUV ")
 
     def SpeedInfo(self):
         print("I'm going at 5.4 knots")
@@ -61,7 +61,7 @@ class UUV(Unmanned,vehicule):
 class UAV(Unmanned,vehicule):
 
     def vehicule_type(self):
-        print("I'm an UAV")
+        print("I'm an UAV ")
 
     def SpeedInfo(self):
         print("I'm flying mach 3 speed") 
@@ -71,7 +71,7 @@ class UAV(Unmanned,vehicule):
     
     @property
     def Name(self):
-        return 'UAV' +self.name
+        return 'UAV ' +self.name
 
     @Name.setter
     def Name(self,name):
@@ -80,14 +80,14 @@ class UAV(Unmanned,vehicule):
 class UGV(Unmanned,vehicule):
     name = 'unkown'
     def vehicule_type(self):
-        print("I'm an UGV")
+        print("I'm an UGV ")
 
     def SpeedInfo(self):
         print("I'm riding at 120 Miles per hour")
     
     @property
     def Name(self):
-        return 'UGV' +self.name
+        return 'UGV ' +self.name
 
     @Name.setter
     def Name(self,name):
@@ -100,24 +100,28 @@ class UAGV(UGV,UAV):
 
 
 drone = UAV()
+
 drone.Name = 'Drone'
-print("\nI'm ", drone.Name)
+print("\nI'm", drone.Name)
 drone.vehicule_type()
 drone.Mission()
 
 submarine = UUV()
+
 submarine.Name = 'submarine'
-print("\nI'm ", submarine.Name)
+print("\nI'm", submarine.Name)
 submarine.Moove()
 submarine.SpeedInfo()
 
 motorbike = UGV()
+
 motorbike.Name = 'motorbike'
-print("\nI'm ", motorbike.Name)
+print("\nI'm", motorbike.Name)
 motorbike.Human_Control()
 motorbike.Connection()
 
 plane = UAGV()
+
 plane.Name = 'plane'
-print("\nI'm ", plane.Name)
+print("\nI'm", plane.Name)
 plane.Autonomous_Control()
